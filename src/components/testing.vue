@@ -82,9 +82,9 @@
             cbChange: function(){
                 //this.addressLine1.id = this.addressLine1.id.split('').reverse().join('');
                 //this.addressLine2.id = this.addressLine2.id.split('').reverse().join('');
-                this.city.id = this.city.id.split('').reverse().join('');
-                this.state.id = this.state.id.split('').reverse().join('');
-                this.zip.id = this.zip.id.split('').reverse().join('');
+                //this.city.id = this.city.id.split('').reverse().join('');
+                //this.state.id = this.state.id.split('').reverse().join('');
+                //this.zip.id = this.zip.id.split('').reverse().join('');
             }
 
 
