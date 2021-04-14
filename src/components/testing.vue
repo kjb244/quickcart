@@ -2,14 +2,14 @@
     <section>
         <div class="row">
             <div class="col col-sm-12 col-md-6">
-                <h3 class="text-center">testing</h3>
+                <h3 class="text-center">For Chrome</h3>
                 <form autocomplete="off">
                     <b-form-checkbox @change="cbChange()" id="checkbox-1" v-model="cbox" name="checkbox-1">
                         Show/hide
                     </b-form-checkbox>
                     <div v-show="cbox">
                         <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
-                        <b-form-input   :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
+                        <b-form-input autocomplete="new-password"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
                         <label class="mt-5" :for="addressLine2.id">{{addressLine2.label}} </label>
                         <b-form-input autocomplete="new-password" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
