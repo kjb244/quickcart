@@ -8,7 +8,7 @@
                         Show/hide
                     </b-form-checkbox>
                     <div v-show="cbox">
-                        <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
+                        <label class="mt-2" :for="addressLine1.id">random</label>
                         <b-form-input autocomplete="new-password"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
                         <label class="mt-5" :for="addressLine2.id">{{addressLine2.label}} </label>
