@@ -47,8 +47,8 @@
             return{
                 addressLine1: {
                     model: '',
-                    id: 'l1',
-                    label: 'Address Line 1'
+                    id: 'line1',
+                    label: 'Line 1'
                 },
                 addressLine2: {
                     model: '',
