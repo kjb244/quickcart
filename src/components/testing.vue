@@ -9,19 +9,19 @@
                     </b-form-checkbox>
                     <div v-show="cbox">
                         <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
-                        <b-form-input autocomplete="new-password"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
+                        <b-form-input autocomplete="new-password" :name="addressLine1.id"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
                         <label class="mt-5" :for="addressLine2.id">{{addressLine2.label}} </label>
-                        <b-form-input autocomplete="new-password" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
+                        <b-form-input autocomplete="new-password" :name="addressLine2.id" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
 
                         <label class="mt-5" :for="city.id">{{city.label}}</label>
-                        <b-form-input autocomplete="new-password" :id="city.id" v-model="city.model"></b-form-input>
+                        <b-form-input autocomplete="new-password" :name="city.id" :id="city.id" v-model="city.model"></b-form-input>
 
                         <label class="mt-5" :for="state.id">{{state.label}}</label>
-                        <b-form-input autocomplete="new-password"  :id="state.id" v-model="state.model"></b-form-input>
+                        <b-form-input autocomplete="new-password" :name="state.id"  :id="state.id" v-model="state.model"></b-form-input>
 
                         <label class="mt-5" :for="zip.id">{{zip.label}}</label>
-                        <b-form-input autocomplete="new-password" :id="zip.id" v-model="zip.model"></b-form-input>
+                        <b-form-input autocomplete="new-password" :name="zip.id" :id="zip.id" v-model="zip.model"></b-form-input>
                     </div>
 
 
