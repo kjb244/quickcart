@@ -4,13 +4,25 @@
             <div class="col col-sm-12 col-md-6">
                 <h3 class="text-center">testing</h3>
                 <form>
+                    <b-form-checkbox @change="cbChange()" id="checkbox-1" v-model="cbox" name="checkbox-1">
+                        Show/hide
+                    </b-form-checkbox>
+                    <div v-show="cbox">
+                        <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
+                        <b-form-input autocomplete="new-password"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
-                    <b-form-input autocomplete="new-password"  class="mt-2" id="addressLine1" v-model="addressLine1" placeholder="Address Line 1"></b-form-input>
-                    <b-form-input autocomplete="new-password" class="mt-5" id="addressLine2" v-model="addressLine2" placeholder="Address Line 2"></b-form-input>
-                    <b-form-input autocomplete="new-password" class="mt-5" id="city" v-model="city" placeholder="City"></b-form-input>
-                    <b-form-input autocomplete="new-password" class="mt-5" id="state" v-model="state" placeholder="State"></b-form-input>
-                    <b-form-input autocomplete="new-password" class="mt-5" id="zip" v-model="zip" placeholder="Zip"></b-form-input>
+                        <label class="mt-5" :for="addressLine2.id">{{addressLine2.label}} </label>
+                        <b-form-input autocomplete="new-password" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
 
+                        <label class="mt-5" :for="city.id">{{city.label}}</label>
+                        <b-form-input autocomplete="new-password" :id="city.id" v-model="city.model"></b-form-input>
+
+                        <label class="mt-5" :for="state.id">{{state.label}}</label>
+                        <b-form-input autocomplete="new-password"  :id="state.id" v-model="state.model"></b-form-input>
+
+                        <label class="mt-5" :for="zip.id">{{zip.label}}</label>
+                        <b-form-input autocomplete="new-password" :id="zip.id" v-model="zip.model"></b-form-input>
+                    </div>
 
 
                 </form>
@@ -33,11 +45,32 @@
         props: [],
         data(){
             return{
-                addressLine1: '',
-                addressLine2: '',
-                city: '',
-                state: '',
-                zip: '',
+                addressLine1: {
+                    model: '',
+                    id: 'addressLine1',
+                    label: 'address line 1'
+                },
+                addressLine2: {
+                    model: '',
+                    id: 'addressLine2',
+                    label: 'address line 2'
+                },
+                city: {
+                    model: '',
+                    id: 'city',
+                    label: 'city'
+                },
+                state: {
+                    model: '',
+                    id: 'state',
+                    label: 'state'
+                },
+                zip: {
+                    model: '',
+                    id: 'zip',
+                    label: 'zip'
+                },
+                cbox: false
 
             }
         },
@@ -45,6 +78,14 @@
 
         },
         methods: {
+
+            cbChange: function(){
+                this.addressLine1.id = this.addressLine1.id.split('').reverse().join('');
+                this.addressLine2.id = this.addressLine2.id.split('').reverse().join('');
+                this.city.id = this.city.id.split('').reverse().join('');
+                this.state.id = this.state.id.split('').reverse().join('');
+                this.zip.id = this.zip.id.split('').reverse().join('');
+            }
 
 
         },
