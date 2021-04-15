@@ -9,10 +9,10 @@
                     </b-form-checkbox>
                     <div v-show="cbox">
                         <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
-                        <b-form-input autocomplete="new-password" :name="addressLine1.id"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
+                        <b-form-input autocomplete="off" :name="addressLine1.id"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
                         <label class="mt-5" :for="addressLine2.id">{{addressLine2.label}} </label>
-                        <b-form-input autocomplete="new-password" :name="addressLine2.id" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
+                        <b-form-input autocomplete="given-aline" :name="addressLine2.id" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
 
                         <label class="mt-5" :for="city.id">{{city.label}}</label>
                         <b-form-input autocomplete="new-password" :name="city.id" :id="city.id" v-model="city.model"></b-form-input>
@@ -47,8 +47,8 @@
             return{
                 addressLine1: {
                     model: '',
-                    id: 'line1',
-                    label: 'Line 1'
+                    id: 'addressLine1',
+                    label: 'address Line 1'
                 },
                 addressLine2: {
                     model: '',
