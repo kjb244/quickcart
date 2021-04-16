@@ -48,7 +48,7 @@
                 addressLine1: {
                     model: '',
                     id: 'businessAddressLine1',
-                    label: 'Business Address Line 1'
+                    label: 'Address Line 1'
                 },
                 addressLine2: {
                     model: '',
