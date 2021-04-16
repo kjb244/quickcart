@@ -47,7 +47,7 @@
             return{
                 addressLine1: {
                     model: '',
-                    id: 'businessAddressLine1',
+                    id: 'addressLine1',
                     label: 'Address Line 1'
                 },
                 addressLine2: {
