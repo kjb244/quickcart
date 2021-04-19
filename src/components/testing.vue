@@ -8,11 +8,9 @@
                         Show/hide
                     </b-form-checkbox>
 
-                    <label class="mt-2" :for="firstName.id">{{firstName.label}}</label>
-                    <b-form-input autocomplete="name" :name="firstName.id"  :id="firstName.id" v-model="firstName.model" ></b-form-input>
+                    <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
+                    <b-form-input autocomplete="new-password" :name="adsfadsfsdf"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
-                    <label class="mt-2" :for="lastName.id">{{lastName.label}}</label>
-                    <b-form-input autocomplete="given-name" :name="lastName.id"  :id="lastName.id" v-model="lastName.model" ></b-form-input>
 
 
 
@@ -36,10 +34,10 @@
         props: [],
         data(){
             return{
-                firstName: {
+                addressLine1: {
                     model: '',
-                    id: 'firstName',
-                    label: 'First Name'
+                    id: 'addressLine1',
+                    label: 'Address Line 1'
                 },
                 lastName: {
                     model: '',
