@@ -50,15 +50,21 @@
                     },
                     {
                         model: '',
-                        id: 'notAField',
-                        name: 'notAField',
+                        id: 'notAField2',
+                        name: 'notAField2',
                         label: 'Address Line 1'
                     },
                     {
                         model: '',
-                        id: 'notAField',
+                        id: 'notAField3',
                         name: 'addressLineOne',
                         label: 'A Line'
+                    },
+                    {
+                        model: '',
+                        id: 'notAField4',
+                        name: 'notAField4',
+                        label: 'Not a Field'
                     }
                 ]
 
