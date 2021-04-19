@@ -7,22 +7,20 @@
                     <b-form-checkbox @change="cbChange()" id="checkbox-1" v-model="cbox" name="checkbox-1">
                         Show/hide
                     </b-form-checkbox>
-                    <div v-show="cbox">
                         <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
-                        <b-form-input autocomplete="new-password" name="notASearchField"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
+                        <b-form-input autocomplete="new-password" name="notAField"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
                         <label class="mt-5" :for="addressLine2.id">{{addressLine2.label}} </label>
-                        <b-form-input autocomplete="given-aline" :name="addressLine2.id" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
+                        <b-form-input autocomplete="off" :name="addressLine2.id" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
 
                         <label class="mt-5" :for="city.id">{{city.label}}</label>
-                        <b-form-input autocomplete="new-password" :name="city.id" :id="city.id" v-model="city.model"></b-form-input>
+                        <b-form-input autocomplete="false" name="city" :id="city.id" v-model="city.model"></b-form-input>
 
                         <label class="mt-5" :for="state.id">{{state.label}}</label>
                         <b-form-input autocomplete="new-password" :name="state.id"  :id="state.id" v-model="state.model"></b-form-input>
 
                         <label class="mt-5" :for="zip.id">{{zip.label}}</label>
                         <b-form-input autocomplete="new-password" :name="zip.id" :id="zip.id" v-model="zip.model"></b-form-input>
-                    </div>
 
 
                 </form>
@@ -47,7 +45,7 @@
             return{
                 addressLine1: {
                     model: '',
-                    id: 'addressLine1',
+                    id: 'kjh',
                     label: 'Address Line 1'
                 },
                 addressLine2: {
@@ -58,7 +56,7 @@
                 city: {
                     model: '',
                     id: 'city',
-                    label: 'city'
+                    label: 'City'
                 },
                 state: {
                     model: '',
