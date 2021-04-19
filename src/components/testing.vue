@@ -2,25 +2,18 @@
     <section>
         <div class="row">
             <div class="col col-sm-12 col-md-6">
-                <h3 class="text-center">For Chrome</h3>
+                <h3 class="text-center">Heading</h3>
                 <form autocomplete="off">
                     <b-form-checkbox @change="cbChange()" id="checkbox-1" v-model="cbox" name="checkbox-1">
                         Show/hide
                     </b-form-checkbox>
-                        <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
-                        <b-form-input autocomplete="new-password" name="notAField"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
 
-                        <label class="mt-5" :for="addressLine2.id">{{addressLine2.label}} </label>
-                        <b-form-input autocomplete="off" :name="addressLine2.id" :id="addressLine2.id" v-model="addressLine2.model"></b-form-input>
+                    <label class="mt-2" :for="firstName.id">{{firstName.label}}</label>
+                    <b-form-input autocomplete="name" :name="firstName.id"  :id="firstName.id" v-model="firstName.model" ></b-form-input>
 
-                        <label class="mt-5" :for="city.id">{{city.label}}</label>
-                        <b-form-input autocomplete="false" name="city" :id="city.id" v-model="city.model"></b-form-input>
+                    <label class="mt-2" :for="lastName.id">{{lastName.label}}</label>
+                    <b-form-input autocomplete="given-name" :name="lastName.id"  :id="lastName.id" v-model="lastName.model" ></b-form-input>
 
-                        <label class="mt-5" :for="state.id">{{state.label}}</label>
-                        <b-form-input autocomplete="new-password" :name="state.id"  :id="state.id" v-model="state.model"></b-form-input>
-
-                        <label class="mt-5" :for="zip.id">{{zip.label}}</label>
-                        <b-form-input autocomplete="new-password" :name="zip.id" :id="zip.id" v-model="zip.model"></b-form-input>
 
 
                 </form>
@@ -43,31 +36,17 @@
         props: [],
         data(){
             return{
-                addressLine1: {
+                firstName: {
                     model: '',
-                    id: 'kjh',
-                    label: 'Address Line 1'
+                    id: 'firstName',
+                    label: 'First Name'
                 },
-                addressLine2: {
+                lastName: {
                     model: '',
-                    id: 'addressLine2',
-                    label: 'address Line 2'
+                    id: 'lastName',
+                    label: 'Last Name'
                 },
-                city: {
-                    model: '',
-                    id: 'city',
-                    label: 'City'
-                },
-                state: {
-                    model: '',
-                    id: 'state',
-                    label: 'state'
-                },
-                zip: {
-                    model: '',
-                    id: 'zip',
-                    label: 'zip'
-                },
+
                 cbox: false
 
             }
