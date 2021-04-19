@@ -3,13 +3,14 @@
         <div class="row">
             <div class="col col-sm-12 col-md-6">
                 <h3 class="text-center">Heading</h3>
-                <form autocomplete="off">
-                    <b-form-checkbox @change="cbChange()" id="checkbox-1" v-model="cbox" name="checkbox-1">
-                        Show/hide
-                    </b-form-checkbox>
+                <form>
 
-                    <label class="mt-2" :for="addressLine1.id">{{addressLine1.label}}</label>
-                    <b-form-input autocomplete="new-password" :name="adsfadsfsdf"  :id="addressLine1.id" v-model="addressLine1.model" ></b-form-input>
+                    <div class="mb-5" v-bind:key="rec.name + rec.id + rec.label" v-for="rec in inputs">
+                        <label class="mt-2" :for="rec.id">{{rec.label}}</label>
+                        <b-form-input :autocomplete="rec.autocomplete" :name="rec.name"  :id="rec.id" v-model="rec.model" ></b-form-input>
+                        {{rec}}
+                    </div>
+
 
 
 
@@ -34,18 +35,54 @@
         props: [],
         data(){
             return{
-                addressLine1: {
-                    model: '',
-                    id: 'addressLine1',
-                    label: 'Address Line 1'
-                },
-                lastName: {
-                    model: '',
-                    id: 'lastName',
-                    label: 'Last Name'
-                },
+                inputs: [
+                    {
+                        model: '',
+                        id: 'streetAddress',
+                        name: 'streetAddress',
+                        label: 'Street Address',
+                        autocomplete: 'street-address'
 
-                cbox: false
+                    },
+                    {
+                        model: '',
+                        id: 'addressLine1',
+                        name: 'addressLine1',
+                        label: 'Address Line 1',
+                        autocomplete: 'address-line1'
+                    },
+                    {
+                        model: '',
+                        id: 'addressLine2',
+                        name: 'addressLine2',
+                        label: 'Address Line 2',
+                        autocomplete: 'address-line2'
+                    },
+                    {
+                        model: '',
+                        id: 'addressLine3',
+                        name: 'addressLine3',
+                        label: 'Address Line 3',
+                        autocomplete: 'address-line3'
+                    },
+                    {
+                        model: '',
+                        id: 'addressLevel1',
+                        name: 'addressLevel1',
+                        label: 'Address Level 1',
+                        autocomplete: 'address-level1'
+                    },
+                    {
+                        model: '',
+                        id: 'addressLevel2',
+                        name: 'addressLevel2',
+                        label: 'Address Level 2',
+                        autocomplete: 'address-level2'
+                    },
+                ]
+
+
+
 
             }
         },
@@ -54,13 +91,6 @@
         },
         methods: {
 
-            cbChange: function(){
-                //this.addressLine1.id = this.addressLine1.id.split('').reverse().join('');
-                //this.addressLine2.id = this.addressLine2.id.split('').reverse().join('');
-                //this.city.id = this.city.id.split('').reverse().join('');
-                //this.state.id = this.state.id.split('').reverse().join('');
-                //this.zip.id = this.zip.id.split('').reverse().join('');
-            }
 
 
         },
