@@ -36,14 +36,6 @@
         data(){
             return{
                 inputs: [
-
-                    {
-                        model: '',
-                        id: 'streetNumberMailing',
-                        name: 'streetNumberMailing',
-                        class: 'street-number-mailing-field',
-                        label: 'Street Number (optional)',
-                    },
                     {
                         model: '',
                         id: 'addressLine1',
