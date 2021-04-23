@@ -48,7 +48,7 @@
                         name: 'streetNumberMailing',
                         class: 'street-number-mailing-field',
                         label: 'Street Number (optional)',
-                        autocomplete: 'new-password'
+                        autocomplete: ''
                     },
                     {
                         model: '',
