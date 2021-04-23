@@ -7,7 +7,7 @@
 
                     <div class="mb-5" v-bind:key="rec.name + rec.id + rec.label" v-for="rec in inputs">
                         <label class="mt-2" :for="rec.id">{{rec.label}}</label>
-                        <b-form-input :autocomplete="rec.autocomplete"
+                        <b-form-input
                                       :class="rec.class || rec.name"
                                       :name="rec.name"
                                       :id="rec.id"
