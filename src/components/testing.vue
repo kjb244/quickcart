@@ -47,7 +47,7 @@
                         id: 'streetNumberMailing',
                         name: 'streetNumberMailing',
                         class: 'street-number-mailing-field',
-                        label: 'Mailing Street (optional)',
+                        label: 'Business Street (optional)',
                         autocomplete: ''
                     },
                     {
