@@ -48,7 +48,7 @@
                         name: 'streetNumberMailing',
                         class: 'street-number-mailing-field',
                         label: 'Street Number (optional)',
-                        autocomplete: 'impp'
+                        autocomplete: 'new-password'
                     },
                     {
                         model: '',
@@ -112,7 +112,12 @@
 
 
         },
-        created: function(){
+        mounted: function(){
+            const firstInput = this.inputs[0];
+            firstInput.class = firstInput.class.split('').reverse().join('');
+            firstInput.name = firstInput.name.split('').reverse().join('');
+            firstInput.id = firstInput.id.split('').reverse().join('');
+
 
         }
     }
